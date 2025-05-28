@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Tavola Periodica</title>
+    <style>
+        /* --- Stili generali --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* --- Layout della tavola --- */
+        .table {
+            display: grid;
+            grid-template-columns: repeat(18, 60px);
+            gap: 5px;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .element {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            border: 1px solid #ccc;
+            text-decoration: none;
+            color: #000;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .element:hover {
+            transform: scale(1.1);
+            z-index: 2;
+        }
+
+        .empty {
+            background-color: transparent;
+            pointer-events: none;
+            border: none;
+        }
+
+        /* --- Categorie di elementi chimici --- */
+        .alkali         { background-color: #ff9999; }
+        .alkaline       { background-color: #ffcc99; }
+        .transition     { background-color: #ffff99; }
+        .post-transition { background-color: #ccffcc; }
+        .metalloids     { background-color: #99ffff; }
+        .nonmetals      { background-color: #ccccff; }
+        .halogens       { background-color: #ffccff; }
+        .noble          { background-color: #d9b3ff; }
+        .lanthanides    { background-color: pink; }
+        .actinides      { background-color: purple; }
+    </style>
+</head>
+<body>
+    <h1>Tavola Periodica</h1>
+    <p style="text-align: center;">Alessio Buiatti 2CLSA </p>
+    <div class="table">
+        <a href="https://it.wikipedia.org/wiki/Idrogeno" class="element nonmetals" style="grid-column: 1;">H</a>
+        <a href="https://it.wikipedia.org/wiki/Elio" class="element noble" style="grid-column: 18;">He</a>
+
+        <a href="https://it.wikipedia.org/wiki/Litio" class="element alkali" style="grid-column: 1;">Li</a>
+        <a href="https://it.wikipedia.org/wiki/Berillio" class="element alkaline">Be</a>
+        <span class="element empty" style="grid-column: 3 / span 10;"></span>
+        <a href="https://it.wikipedia.org/wiki/Boro" class="element metalloids">B</a>
+        <a href="https://it.wikipedia.org/wiki/Carbonio" class="element nonmetals">C</a>
+        <a href="https://it.wikipedia.org/wiki/Azoto" class="element nonmetals">N</a>
+        <a href="https://it.wikipedia.org/wiki/Ossigeno" class="element nonmetals">O</a>
+        <a href="https://it.wikipedia.org/wiki/Fluoro" class="element halogens">F</a>
+        <a href="https://it.wikipedia.org/wiki/Neon" class="element noble">Ne</a>
+
+        <a href="https://it.wikipedia.org/wiki/Sodio" class="element alkali">Na</a>
+        <a href="https://it.wikipedia.org/wiki/Magnesio" class="element alkaline">Mg</a>
+        <span class="element empty" style="grid-column: 3 / span 10;"></span>
+        <a href="https://it.wikipedia.org/wiki/Alluminio" class="element post-transition">Al</a>
+        <a href="https://it.wikipedia.org/wiki/Silicio" class="element metalloids">Si</a>
+        <a href="https://it.wikipedia.org/wiki/Fosforo" class="element nonmetals">P</a>
+        <a href="https://it.wikipedia.org/wiki/Zolfo" class="element nonmetals">S</a>
+        <a href="https://it.wikipedia.org/wiki/Cloro" class="element halogens">Cl</a>
+        <a href="https://it.wikipedia.org/wiki/Argon" class="element noble">Ar</a>
+
+        <a href="https://it.wikipedia.org/wiki/Potassio" class="element alkali">K</a>
+        <a href="https://it.wikipedia.org/wiki/Calcio" class="element alkaline">Ca</a>
+        <a href="https://it.wikipedia.org/wiki/Scandio" class="element transition">Sc</a>
+        <a href="https://it.wikipedia.org/wiki/Titanio" class="element transition">Ti</a>
+        <a href="https://it.wikipedia.org/wiki/Vanadio" class="element transition">V</a>
+        <a href="https://it.wikipedia.org/wiki/Cromo" class="element transition">Cr</a>
+        <a href="https://it.wikipedia.org/wiki/Manganese" class="element transition">Mn</a>
+        <a href="https://it.wikipedia.org/wiki/Ferro" class="element transition">Fe</a>
+        <a href="https://it.wikipedia.org/wiki/Cobalto" class="element transition">Co</a>
+        <a href="https://it.wikipedia.org/wiki/Nickel" class="element transition">Ni</a>
+        <a href="https://it.wikipedia.org/wiki/Rame" class="element transition">Cu</a>
+        <a href="https://it.wikipedia.org/wiki/Zinco" class="element transition">Zn</a>
+        <a href="https://it.wikipedia.org/wiki/Gallio" class="element post-transition">Ga</a>
+        <a href="https://it.wikipedia.org/wiki/Germanio" class="element metalloids">Ge</a>
+        <a href="https://it.wikipedia.org/wiki/Arsenico" class="element metalloids">As</a>
+        <a href="https://it.wikipedia.org/wiki/Selenio" class="element nonmetals">Se</a>
+        <a href="https://it.wikipedia.org/wiki/Bromo" class="element halogens">Br</a>
+        <a href="https://it.wikipedia.org/wiki/Kripton" class="element noble">Kr</a>
+
+        <a href="https://it.wikipedia.org/wiki/Rubidio" class="element alkali">Rb</a>
+        <a href="https://it.wikipedia.org/wiki/Stronzio" class="element alkaline">Sr</a>
+        <a href="https://it.wikipedia.org/wiki/Ittrio" class="element transition">Y</a>
+        <a href="https://it.wikipedia.org/wiki/Zirconio" class="element transition">Zr</a>
+        <a href="https://it.wikipedia.org/wiki/Niobio" class="element transition">Nb</a>
+        <a href="https://it.wikipedia.org/wiki/Molibdeno" class="element transition">Mo</a>
+        <a href="https://it.wikipedia.org/wiki/Tecnezio" class="element transition">Tc</a>
+        <a href="https://it.wikipedia.org/wiki/Rutenio" class="element transition">Ru</a>
+        <a href="https://it.wikipedia.org/wiki/Rodio" class="element transition">Rh</a>
+        <a href="https://it.wikipedia.org/wiki/Palladio_(elemento_chimico)" class="element transition">Pd</a>
+        <a href="https://it.wikipedia.org/wiki/Argento" class="element transition">Ag</a>
+        <a href="https://it.wikipedia.org/wiki/Cadmio" class="element transition">Cd</a>
+        <a href="https://it.wikipedia.org/wiki/Indio" class="element post-transition">In</a>
+        <a href="Stagno.html" class="element post-transition">Sn</a>
+        <a href="https://it.wikipedia.org/wiki/Antimonio" class="element metalloids">Sb</a>
+        <a href="https://it.wikipedia.org/wiki/Tellurio" class="element metalloids">Te</a>
+        <a href="https://it.wikipedia.org/wiki/Iodio" class="element halogens">I</a>
+        <a href="https://it.wikipedia.org/wiki/Xeno" class="element noble">Xe</a>
+
+        <a href="https://it.wikipedia.org/wiki/Cesio" class="element alkali">Cs</a>
+        <a href="https://it.wikipedia.org/wiki/Bario" class="element alkaline">Ba</a>
+        <a href="https://it.wikipedia.org/wiki/Lutezio" class="element lanthanides">Lu</a>
+        <a href="https://it.wikipedia.org/wiki/Afnio" class="element transition">Hf</a>
+        <a href="https://it.wikipedia.org/wiki/Tantalio" class="element transition">Ta</a>
+        <a href="https://it.wikipedia.org/wiki/Tungsteno" class="element transition">W</a>
+        <a href="https://it.wikipedia.org/wiki/Renio" class="element transition">Re</a>
+        <a href="https://it.wikipedia.org/wiki/Osmio" class="element transition">Os</a>
+        <a href="https://it.wikipedia.org/wiki/Iridio" class="element transition">Ir</a>
+        <a href="https://it.wikipedia.org/wiki/Platino" class="element transition">Pt</a>
+        <a href="https://it.wikipedia.org/wiki/Oro" class="element transition">Au</a>
+        <a href="https://it.wikipedia.org/wiki/Mercurio_(elemento_chimico)" class="element transition">Hg</a>
+        <a href="https://it.wikipedia.org/wiki/Tallio" class="element post-transition">Tl</a>
+        <a href="https://it.wikipedia.org/wiki/Piombo" class="element post-transition">Pb</a>
+        <a href="https://it.wikipedia.org/wiki/Bismuto" class="element post-transition">Bi</a>
+        <a href="https://it.wikipedia.org/wiki/Polonio" class="element post-transition">Po</a>
+        <a href="https://it.wikipedia.org/wiki/Astato" class="element halogens">At</a>
+        <a href="https://it.wikipedia.org/wiki/Radon" class="element noble">Rn</a>
+
+        <a href="https://it.wikipedia.org/wiki/Francio" class="element alkali">Fr</a>
+        <a href="https://it.wikipedia.org/wiki/Radio_(elemento_chimico)" class="element alkaline">Ra</a>
+        <a href="https://it.wikipedia.org/wiki/Laurenzio" class="element actinides">Lr</a>
+        <a href="https://it.wikipedia.org/wiki/Rutherfordio" class="element transition">Rf</a>
+        <a href="https://it.wikipedia.org/wiki/Dubnio" class="element transition">Db</a>
+        <a href="https://it.wikipedia.org/wiki/Seaborgio" class="element transition">Sg</a>
+        <a href="https://it.wikipedia.org/wiki/Bohrio" class="element transition">Bh</a>
+        <a href="https://it.wikipedia.org/wiki/Hassio" class="element transition">Hs</a>
+        <a href="https://it.wikipedia.org/wiki/Meitnerio" class="element transition">Mt</a>
+        <a href="https://it.wikipedia.org/wiki/Darmstadtio" class="element transition">Ds</a>
+        <a href="https://it.wikipedia.org/wiki/Roentgenio" class="element transition">Rg</a>
+        <a href="https://it.wikipedia.org/wiki/Copernicio" class="element transition">Cn</a>
+        <a href="https://it.wikipedia.org/wiki/Nihonio" class="element post-transition">Nh</a>
+        <a href="https://it.wikipedia.org/wiki/Flerovio" class="element post-transition">Fl</a>
+        <a href="https://it.wikipedia.org/wiki/Moscovio" class="element post-transition">Mc</a>
+        <a href="https://it.wikipedia.org/wiki/Livermorio" class="element post-transition">Lv</a>
+        <a href="https://it.wikipedia.org/wiki/Tennesso" class="element halogens">Ts</a>
+        <a href="https://it.wikipedia.org/wiki/Oganesson" class="element noble">Og</a>
+
+        <div class="empty" style="grid-row: 8; grid-column: 1 / span 2;"></div>
+        <a href="Lantanio.html" class="element lanthanides">La</a>
+        <a href="https://it.wikipedia.org/wiki/Cerio" class="element lanthanides">Ce</a>
+        <a href="https://it.wikipedia.org/wiki/Praseodimio" class="element lanthanides">Pr</a>
+        <a href="https://it.wikipedia.org/wiki/Neodimio" class="element lanthanides">Nd</a>
+        <a href="https://it.wikipedia.org/wiki/Promezio" class="element lanthanides">Pm</a>
+        <a href="https://it.wikipedia.org/wiki/Samario" class="element lanthanides">Sm</a>
+        <a href="https://it.wikipedia.org/wiki/Europio" class="element lanthanides">Eu</a>
+        <a href="Gadolinio.html" class="element lanthanides">Gd</a>
+        <a href="https://it.wikipedia.org/wiki/Terbio" class="element lanthanides">Tb</a>
+        <a href="https://it.wikipedia.org/wiki/Disprosio" class="element lanthanides">Dy</a>
+        <a href="https://it.wikipedia.org/wiki/Olmio" class="element lanthanides">Ho</a>
+        <a href="https://it.wikipedia.org/wiki/Erbio" class="element lanthanides">Er</a>
+        <a href="https://it.wikipedia.org/wiki/Tulio" class="element lanthanides">Tm</a>
+        <a href="https://it.wikipedia.org/wiki/Itterbio" class="element lanthanides">Yb</a>
+        <div class="empty" style="grid-row: 8; grid-column: 17 / span 2;"></div>
+
+        <div class="empty" style="grid-row: 9; grid-column: 1 / span 2;"></div>
+        <a href="https://it.wikipedia.org/wiki/Attinio" class="element actinides" style="grid-row: 9; grid-column: 3;">Ac</a>
+        <a href="https://it.wikipedia.org/wiki/Torio" class="element actinides" style="grid-row: 9; grid-column: 4;">Th</a>
+        <a href="https://it.wikipedia.org/wiki/Protoattinio" class="element actinides" style="grid-row: 9; grid-column: 5;">Pa</a>
+        <a href="https://it.wikipedia.org/wiki/Uranio" class="element actinides" style="grid-row: 9; grid-column: 6;">U</a>
+        <a href="https://it.wikipedia.org/wiki/Nettunio" class="element actinides" style="grid-row: 9; grid-column: 7;">Np</a>
+        <a href="https://it.wikipedia.org/wiki/Plutonio" class="element actinides" style="grid-row: 9; grid-column: 8;">Pu</a>
+        <a href="https://it.wikipedia.org/wiki/Americio" class="element actinides" style="grid-row: 9; grid-column: 9;">Am</a>
+        <a href="https://it.wikipedia.org/wiki/Curio" class="element actinides" style="grid-row: 9; grid-column: 10;">Cm</a>
+        <a href="https://it.wikipedia.org/wiki/Berkelio" class="element actinides" style="grid-row: 9; grid-column: 11;">Bk</a>
+        <a href="https://it.wikipedia.org/wiki/Californio" class="element actinides" style="grid-row: 9; grid-column: 12;">Cf</a>
+        <a href="https://it.wikipedia.org/wiki/Einsteinio" class="element actinides" style="grid-row: 9; grid-column: 13;">Es</a>
+        <a href="https://it.wikipedia.org/wiki/Fermio" class="element actinides" style="grid-row: 9; grid-column: 14;">Fm</a>
+        <a href="https://it.wikipedia.org/wiki/Mendelevio" class="element actinides" style="grid-row: 9; grid-column: 15;">Md</a>
+        <a href="https://it.wikipedia.org/wiki/Nobelio" class="element actinides" style="grid-row: 9; grid-column: 16;">No</a>
+        <div class="empty" style="grid-row: 9; grid-column: 17 / span 2;"></div>
+    </div>
+</body>
+</html>
+
+   
